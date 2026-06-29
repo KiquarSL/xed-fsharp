@@ -15,7 +15,8 @@ import java.io.File
 @Suppress("unused")
 class Main(context: ExtensionContext) : ExtensionAPI(context) {
     private var fileResolver: AssetsFileResolver? = null
-    private var dLanguage: DLanguage? = null
+    private var fsLanguage: FSLanguage? = null
+	private var fsprojLanguage: FSProjLanguage? = null
 
     override fun onExtensionLoaded() {
         val fileProviderRegistry = FileProviderRegistry.getInstance()
@@ -26,7 +27,11 @@ class Main(context: ExtensionContext) : ExtensionAPI(context) {
         grammarRegistry.loadGrammars("lang/language.json")
 
         FSLanguage(context.resources).also {
-            dLanguage = it
+            fsLanguage = it
+            FileTypeManager.register(it)
+        }
+		FSProjLanguage(context.resources).also {
+            fsprojLanguage = it
             FileTypeManager.register(it)
         }
     }

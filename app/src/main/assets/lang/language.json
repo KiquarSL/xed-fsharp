@@ -5,6 +5,12 @@
       "name": "F#",
       "scopeName": "source.fs",
       "languageConfiguration": "lang/fs-config.json"
+    },
+	{
+      "grammar": "lang/fsproj.tmLanguage.json",
+      "name": "F# Project",
+      "scopeName": "source.fsproj",
+      "languageConfiguration": "lang/fsproj-config.json"
     }
   ]
 }
