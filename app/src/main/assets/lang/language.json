@@ -1,0 +1,10 @@
+{
+  "languages": [
+    {
+      "grammar": "lang/fs.tmLanguage.json",
+      "name": "F#",
+      "scopeName": "source.fs",
+      "languageConfiguration": "lang/fs-config.json"
+    }
+  ]
+}
